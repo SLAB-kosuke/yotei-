@@ -11,7 +11,8 @@ import {
   addDoc,
   onSnapshot,
   deleteDoc,
-  doc
+  doc,
+  updateDoc
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 
@@ -665,7 +666,22 @@ function renderDayEvents(){
 
       group.className =
         "button-group";
+const editBtn =
+  document.createElement("button");
 
+editBtn.className =
+  "repeat-delete-btn";
+
+editBtn.innerText =
+  "編集";
+
+editBtn.onclick = ()=>{
+
+  editEvent(ev);
+
+};
+
+group.appendChild(editBtn);
       const deleteBtn =
         document.createElement("button");
 
@@ -902,6 +918,37 @@ window.login = login;
 window.saveEvent = saveEvent;
 window.closeModal = closeModal;
 window.changeMonth = changeMonth;
+async function editEvent(ev){
+
+  const newTime =
+    prompt(
+      "新しい時間",
+      ev.time
+    );
+
+  if(!newTime){
+    return;
+  }
+
+  const newSchedule =
+    prompt(
+      "新しい予定",
+      ev.schedule
+    );
+
+  if(!newSchedule){
+    return;
+  }
+
+  await updateDoc(
+    doc(db,"companyEvents",ev.id),
+    {
+      time: newTime,
+      schedule: newSchedule
+    }
+  );
+
+}
 window.openModal = openModal;
 
 
