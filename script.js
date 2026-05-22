@@ -18,13 +18,12 @@ import {
 /* Firebase設定 */
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBGeCs9-gsS66uCZ9HqEsbSqNv4_dOE5Bg",
-  authDomain: "family-calendar-38bf7.firebaseapp.com",
-  projectId: "family-calendar-38bf7",
-  storageBucket: "family-calendar-38bf7.firebasestorage.app",
-  messagingSenderId: "419708212606",
-  appId: "1:419708212606:web:2c93b424d3bd8c7387cf2f",
-  measurementId: "G-H72FRHK749"
+   apiKey: "AIzaSyDWq1YgFGl2e38Wgu603caujNfxCiXfCgQ",
+    authDomain: "company-schedule-70cbb.firebaseapp.com",
+    projectId: "company-schedule-70cbb",
+    storageBucket: "company-schedule-70cbb.firebasestorage.app",
+    messagingSenderId: "1020464054709",
+    appId: "1:1020464054709:web:343e5498206fcb28c7d9fc"
 };
 
 
