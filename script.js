@@ -57,7 +57,7 @@ signInAnonymously(auth)
 
 /* パスワード */
 
-const APP_PASSWORD = "2026";
+const APP_PASSWORD = "7201";
 
 
 /* ログイン */
